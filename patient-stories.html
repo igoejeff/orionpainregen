@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Stories | Orion Pain</title>
+  <meta name="description" content="Read real patient stories from Orion Pain — people who healed chronic pain, osteoarthritis, and sports injuries without surgery or drugs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo-white.png" alt="Orion Pain" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="treatments.html" class="nav-link">Treatments</a></li>
+        <li><a href="conditions.html" class="nav-link">Conditions</a></li>
+        <li><a href="patient-stories.html" class="nav-link">Patient Stories</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+      </ul>
+      <div class="nav-cta"><a href="contact.html" class="btn btn-primary">Book a Consultation</a></div>
+      <button class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav-mobile">
+    <div class="nav-mobile-logo"><img src="images/logo.png" alt="Orion Pain" /></div>
+    <button class="nav-mobile-close"><i class="fa-solid fa-xmark"></i></button>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="treatments.html" class="nav-link">Treatments</a>
+    <a href="conditions.html" class="nav-link">Conditions</a>
+    <a href="patient-stories.html" class="nav-link">Patient Stories</a>
+    <a href="faq.html" class="nav-link">FAQ</a>
+    <a href="contact.html" class="btn btn-primary btn-lg">Book a Consultation</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-orb page-hero-orb-1"></div>
+    <div class="container page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Patient Stories</span>
+      </div>
+      <span class="badge badge-white" style="margin-bottom:1.25rem;display:inline-flex;">
+        <i class="fa-solid fa-heart"></i> Real Results
+      </span>
+      <h1 class="display-lg">Patient Stories</h1>
+      <p>Every patient who walks through our doors has a story — of pain, frustration, and ultimately, healing. Here are just a few of them.</p>
+    </div>
+  </section>
+
+  <!-- FILTER -->
+  <section class="stories-filter">
+    <div class="container">
+      <div class="flex-between" style="flex-wrap:wrap; gap:1rem;">
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-tab active" data-filter="all">All Stories</button>
+          <button class="filter-tab" data-filter="PRP Therapy">PRP Therapy</button>
+          <button class="filter-tab" data-filter="Stem Cell Therapy">Stem Cell</button>
+          <button class="filter-tab" data-filter="Prolotherapy">Prolotherapy</button>
+          <button class="filter-tab" data-filter="Peptide Therapy">Peptide Therapy</button>
+        </div>
+        <div style="font-size:0.875rem; color:var(--charcoal-soft);" id="storyCount">
+          Showing <strong>5</strong> stories
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED STORY (large pull quote) -->
+  <section class="section-sm bg-white">
+    <div class="container">
+      <div style="background:linear-gradient(135deg, var(--green-deep), var(--green-mid)); border-radius:var(--radius-xl); padding:4rem; text-align:center; position:relative; overflow:hidden;" class="fade-up">
+        <div style="position:absolute; top:-50px; right:-50px; width:300px; height:300px; border-radius:50%; background:rgba(82,183,136,0.15); pointer-events:none;"></div>
+        <div style="position:absolute; bottom:-80px; left:-40px; width:250px; height:250px; border-radius:50%; background:rgba(255,255,255,0.05); pointer-events:none;"></div>
+        <div style="position:relative; z-index:1;">
+          <i class="fa-solid fa-quote-left" style="font-size:2.5rem; color:rgba(82,183,136,0.5); margin-bottom:1.5rem; display:block;"></i>
+          <p style="font-family:var(--font-display); font-size:clamp(1.3rem, 2.5vw, 1.9rem); font-style:italic; color:var(--white); line-height:1.55; max-width:800px; margin:0 auto 2rem;">
+            I was told I needed a full knee replacement at 58. I refused to accept that. After three PRP sessions with Dr. Davenport, I'm hiking again — something I hadn't done in four years.
+          </p>
+          <div style="display:flex; align-items:center; gap:1rem; justify-content:center;">
+            <div style="width:52px; height:52px; border-radius:50%; background:rgba(255,255,255,0.2); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:700; font-size:1.25rem; color:var(--white);">J</div>
+            <div style="text-align:left;">
+              <div style="font-weight:700; color:var(--white);">James R., 58</div>
+              <div style="font-size:0.875rem; color:rgba(255,255,255,0.6);">Osteoarthritis · PRP Therapy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO TESTIMONIALS -->
+  <section class="video-testimonials-section" id="video-testimonials" style="padding:5rem 0;">
+    <div class="container">
+
+      <div class="vt-header fade-up" style="margin-bottom:3rem;">
+        <span class="section-label">Video Testimonials</span>
+        <h2 class="display-md">Hear It Directly<br>From Our Patients.</h2>
+        <p class="vt-header-sub">These aren't actors. These are real people who came to us in pain and left with their lives back.</p>
+      </div>
+
+      <div class="vt-grid">
+
+        <!-- Video 1 -->
+        <div class="vt-card fade-up delay-1">
+          <div class="vt-video-wrap">
+            <iframe title="Patient Testimonial 1"
+              src="https://player.vimeo.com/video/1046645829?h=84e1621312&badge=0&autopause=0&player_id=0&app_id=58479"
+              frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy" class="vt-iframe"></iframe>
+          </div>
+          <div class="vt-card-body">
+            <div class="vt-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="vt-quote">"I had been told surgery was my only option. Dr. Davenport proved them all wrong."</p>
+            <div class="vt-patient">
+              <div class="vt-patient-avatar"><i class="fa-solid fa-user"></i></div>
+              <div><div class="vt-patient-name">Verified Patient</div><div class="vt-patient-treatment">Regenerative Knee Therapy</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="vt-card fade-up delay-2">
+          <div class="vt-video-wrap">
+            <iframe title="Patient Testimonial 2"
+              src="https://player.vimeo.com/video/1047359910?h=1ea5504fb0&badge=0&autopause=0&player_id=0&app_id=58479"
+              frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy" class="vt-iframe"></iframe>
+          </div>
+          <div class="vt-card-body">
+            <div class="vt-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="vt-quote">"I was skeptical at first. Now I'm back to doing everything I love — pain free."</p>
+            <div class="vt-patient">
+              <div class="vt-patient-avatar"><i class="fa-solid fa-user"></i></div>
+              <div><div class="vt-patient-name">Verified Patient</div><div class="vt-patient-treatment">PRP &amp; Prolotherapy</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="vt-card fade-up delay-3">
+          <div class="vt-video-wrap">
+            <iframe title="Patient Testimonial 3"
+              src="https://player.vimeo.com/video/1047357368?h=4a0176b919&badge=0&autopause=0&player_id=0&app_id=58479"
+              frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy" class="vt-iframe"></iframe>
+          </div>
+          <div class="vt-card-body">
+            <div class="vt-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="vt-quote">"After years of chronic pain, I finally found a doctor who actually listened and delivered results."</p>
+            <div class="vt-patient">
+              <div class="vt-patient-avatar"><i class="fa-solid fa-user"></i></div>
+              <div><div class="vt-patient-name">Verified Patient</div><div class="vt-patient-treatment">Stem Cell Therapy</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="vt-card fade-up delay-1">
+          <div class="vt-video-wrap">
+            <iframe title="Patient Testimonial 4"
+              src="https://player.vimeo.com/video/1047359112?h=b0ce4d0f12&badge=0&autopause=0&player_id=0&app_id=58479"
+              frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy" class="vt-iframe"></iframe>
+          </div>
+          <div class="vt-card-body">
+            <div class="vt-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="vt-quote">"I didn't want to rely on pain medication forever. Dr. Davenport gave me a real solution."</p>
+            <div class="vt-patient">
+              <div class="vt-patient-avatar"><i class="fa-solid fa-user"></i></div>
+              <div><div class="vt-patient-name">Verified Patient</div><div class="vt-patient-treatment">Regenerative Medicine</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="vt-card fade-up delay-2">
+          <div class="vt-video-wrap">
+            <iframe title="Patient Testimonial 5"
+              src="https://player.vimeo.com/video/1047358106?h=d991ac46ca&badge=0&autopause=0&player_id=0&app_id=58479"
+              frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy" class="vt-iframe"></iframe>
+          </div>
+          <div class="vt-card-body">
+            <div class="vt-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="vt-quote">"My shoulder had been injured for two years. After treatment here I have full range of motion back."</p>
+            <div class="vt-patient">
+              <div class="vt-patient-avatar"><i class="fa-solid fa-user"></i></div>
+              <div><div class="vt-patient-name">Verified Patient</div><div class="vt-patient-treatment">PRP Shoulder Therapy</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 6 -->
+        <div class="vt-card fade-up delay-3">
+          <div class="vt-video-wrap">
+            <iframe title="Patient Testimonial 6"
+              src="https://player.vimeo.com/video/1048453766?h=a3183b9bb5&badge=0&autopause=0&player_id=0&app_id=58479"
+              frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy" class="vt-iframe"></iframe>
+          </div>
+          <div class="vt-card-body">
+            <div class="vt-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="vt-quote">"The difference between before and after is night and day. I wish I had found this clinic years ago."</p>
+            <div class="vt-patient">
+              <div class="vt-patient-avatar"><i class="fa-solid fa-user"></i></div>
+              <div><div class="vt-patient-name">Verified Patient</div><div class="vt-patient-treatment">Stem Cell &amp; Exosome Therapy</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /vt-grid -->
+    </div>
+  </section>
+
+  <!-- STORIES GRID -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="stories-grid" id="storiesGrid">
+        <!-- Loaded via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- RATING SUMMARY -->
+  <section class="section-sm bg-white">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:2rem; text-align:center;" class="fade-up">
+        <div>
+          <div style="font-family:var(--font-display); font-size:3.5rem; font-weight:700; font-style:normal; color:var(--green-deep); line-height:1;" data-count="5" data-suffix="/5">5/5</div>
+          <div style="display:flex; justify-content:center; gap:3px; margin:0.5rem 0;">
+            <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+          </div>
+          <div style="font-size:0.875rem; color:var(--charcoal-soft);">Average Patient Rating</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-display); font-size:3.5rem; font-weight:700; font-style:normal; color:var(--green-deep); line-height:1;" data-count="98" data-suffix="%">98%</div>
+          <div style="margin:0.5rem 0; height:1.25rem;"></div>
+          <div style="font-size:0.875rem; color:var(--charcoal-soft);">Would Recommend Dr. Davenport</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-display); font-size:3.5rem; font-weight:700; font-style:normal; color:var(--green-deep); line-height:1;" data-count="90" data-suffix="%">90%</div>
+          <div style="margin:0.5rem 0; height:1.25rem;"></div>
+          <div style="font-size:0.875rem; color:var(--charcoal-soft);">Avoided Surgery After Treatment</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="final-cta-orb final-cta-orb-1"></div>
+    <div class="final-cta-orb final-cta-orb-2"></div>
+    <div class="container final-cta-content fade-up">
+      <h2>Ready to Write<br>Your Own Story?</h2>
+      <p>Schedule a free consultation with Dr. Davenport. Your healing journey starts with one conversation.</p>
+      <div class="final-cta-buttons">
+        <a href="contact.html" class="btn btn-white btn-lg">
+          Book a Free Consultation <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="tel:5558427200" class="btn btn-ghost-white btn-lg">
+          <i class="fa-solid fa-phone"></i> (555) 842-7200
+        </a>
+      </div>
+      <p class="final-cta-trust">No surgery &nbsp;·&nbsp; No drugs &nbsp;·&nbsp; No obligation</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="images/logo-white.png" alt="Orion Pain" class="footer-logo-img" />
+          <p class="footer-tagline">Heal Without Surgery. Restore Without Drugs.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Treatments</div>
+          <ul class="footer-links">
+            <li><a href="treatments.html#prp">PRP Therapy</a></li>
+            <li><a href="treatments.html#stem-cell">Stem Cell Therapy</a></li>
+            <li><a href="treatments.html#prolotherapy">Prolotherapy</a></li>
+            <li><a href="treatments.html#peptides">Peptide Therapy</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Explore</div>
+          <ul class="footer-links">
+            <li><a href="about.html">About Dr. Davenport</a></li>
+            <li><a href="conditions.html">Conditions Treated</a></li>
+            <li><a href="patient-stories.html">Patient Stories</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>1280 Wellness Blvd, Suite 400<br>Scottsdale, AZ 85251</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><a href="tel:5558427200">(555) 842-7200</a></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:hello@aikenphysicalmedicine.com">hello@aikenphysicalmedicine.com</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Orion Pain. All rights reserved.</p>
+        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/utils.js"></script>
+  <script>
+    let allStories = [];
+
+    function renderStoryCard(t) {
+      const initials = t.patient_name.split(' ').map(n => n[0]).join('');
+      return `
+        <div class="story-card fade-up" data-treatment="${t.treatment}">
+          <div class="story-card-header">
+            <div class="story-avatar">${initials}</div>
+            <div>
+              <div class="story-name">${t.patient_name}${t.age ? ', ' + t.age : ''}</div>
+              <div class="story-meta-tag">${t.condition}</div>
+            </div>
+          </div>
+          <div class="story-body">
+            <div class="story-badges">
+              <span class="story-badge-treatment">${t.treatment}</span>
+              <span class="story-badge-condition">${t.condition}</span>
+            </div>
+            <p class="story-quote">"${t.quote || t.short_quote}"</p>
+            <div class="story-rating">${renderStars(t.rating)}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    function filterStories(filter) {
+      const grid = document.getElementById('storiesGrid');
+      const filtered = filter === 'all' ? allStories : allStories.filter(s => s.treatment === filter);
+      document.getElementById('storyCount').innerHTML = `Showing <strong>${filtered.length}</strong> ${filtered.length === 1 ? 'story' : 'stories'}`;
+      grid.innerHTML = filtered.map(renderStoryCard).join('');
+      initScrollAnimations();
+    }
+
+    async function loadStories() {
+      try {
+        const data = await fetchTable('testimonials', { limit: 100 });
+        allStories = data.data || [];
+        filterStories('all');
+      } catch(e) {
+        // fallback
+        allStories = [
+          { patient_name: 'James R.', age: 58, condition: 'Osteoarthritis', treatment: 'PRP Therapy', quote: 'I was told I needed a full knee replacement at 58. I refused to accept that. After three PRP sessions with Dr. Davenport, I\'m hiking again — something I hadn\'t done in four years.', rating: 5 },
+          { patient_name: 'Maria T.', age: 44, condition: 'Chronic Back Pain', treatment: 'Stem Cell Therapy', quote: 'Twelve years of chronic back pain. Six months after stem cell therapy, I\'m pain-free for the first time since my 30s.', rating: 5 },
+          { patient_name: 'David K.', age: 51, condition: 'Shoulder Injury', treatment: 'Prolotherapy', quote: 'Surgery was on the table. After prolotherapy, my MRI showed significant healing. Surgery canceled.', rating: 5 },
+          { patient_name: 'Linda F.', age: 63, condition: 'Hip Osteoarthritis', treatment: 'PRP Therapy', quote: 'I thought joint pain was just something I had to live with. Dr. Davenport explained exactly what was happening in my hip. Now I\'m traveling and living my life again.', rating: 5 },
+          { patient_name: 'Carlos M.', age: 36, condition: 'Sports Injury', treatment: 'Peptide Therapy', quote: 'As a competitive cyclist, a knee injury felt like the end of everything. Peptide therapy had me back on the bike in half the time predicted.', rating: 5 },
+        ];
+        filterStories('all');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadStories();
+      document.querySelectorAll('.filter-tab').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          filterStories(btn.dataset.filter);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

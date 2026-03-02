@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ | Orion Pain</title>
+  <meta name="description" content="Frequently asked questions about regenerative medicine, PRP, stem cell therapy, prolotherapy, insurance, and booking a consultation with Dr. Denton Davenport, DO, FAOCA at Orion Pain." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo-white.png" alt="Orion Pain" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="treatments.html" class="nav-link">Treatments</a></li>
+        <li><a href="conditions.html" class="nav-link">Conditions</a></li>
+        <li><a href="patient-stories.html" class="nav-link">Patient Stories</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+      </ul>
+      <div class="nav-cta"><a href="contact.html" class="btn btn-primary">Book a Consultation</a></div>
+      <button class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav-mobile">
+    <div class="nav-mobile-logo"><img src="images/logo.png" alt="Orion Pain" /></div>
+    <button class="nav-mobile-close"><i class="fa-solid fa-xmark"></i></button>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="treatments.html" class="nav-link">Treatments</a>
+    <a href="conditions.html" class="nav-link">Conditions</a>
+    <a href="patient-stories.html" class="nav-link">Patient Stories</a>
+    <a href="faq.html" class="nav-link">FAQ</a>
+    <a href="contact.html" class="btn btn-primary btn-lg">Book a Consultation</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-orb page-hero-orb-1"></div>
+    <div class="container page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>FAQ</span>
+      </div>
+      <span class="badge badge-white" style="margin-bottom:1.25rem;display:inline-flex;">
+        <i class="fa-solid fa-circle-question"></i> Common Questions
+      </span>
+      <h1 class="display-lg">Frequently Asked<br>Questions</h1>
+      <p>We believe informed patients make the best decisions. If you don't see your question here, we'd love to answer it directly.</p>
+    </div>
+  </section>
+
+  <!-- FAQ CONTENT -->
+  <section class="section bg-cream">
+    <div class="container-sm">
+
+      <!-- Category Filter -->
+      <div class="faq-categories fade-up" id="faqCategories">
+        <button class="faq-category-btn active" data-cat="all">All Questions</button>
+        <button class="faq-category-btn" data-cat="General">General</button>
+        <button class="faq-category-btn" data-cat="Treatments">Treatments</button>
+        <button class="faq-category-btn" id="insurance" data-cat="Insurance">Insurance & Cost</button>
+        <button class="faq-category-btn" data-cat="Recovery">Recovery</button>
+        <button class="faq-category-btn" data-cat="Appointments">Appointments</button>
+      </div>
+
+      <div class="faq-list" id="faqList">
+        <!-- Loaded via JS -->
+      </div>
+
+      <!-- Still have questions -->
+      <div style="background:var(--white); border-radius:var(--radius-xl); padding:3rem; text-align:center; margin-top:3.5rem; border:1px solid var(--cream-dark); box-shadow:var(--shadow-md);" class="fade-up">
+        <div style="width:64px; height:64px; border-radius:50%; background:var(--green-pale); display:flex; align-items:center; justify-content:center; margin:0 auto 1.25rem; font-size:1.5rem; color:var(--green-deep);">
+          <i class="fa-solid fa-comments"></i>
+        </div>
+        <h3 style="font-size:1.5rem; margin-bottom:0.75rem;">Still Have Questions?</h3>
+        <p style="color:var(--charcoal-soft); max-width:440px; margin:0 auto 2rem; line-height:1.7;">
+          Our care team is happy to answer any questions you have about our treatments, the process, or whether regenerative medicine is right for you.
+        </p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary">
+            Book a Free Consultation <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="tel:5558427200" class="btn btn-outline">
+            <i class="fa-solid fa-phone"></i> Call Us Directly
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="images/logo-white.png" alt="Orion Pain" class="footer-logo-img" />
+          <p class="footer-tagline">Heal Without Surgery. Restore Without Drugs.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Treatments</div>
+          <ul class="footer-links">
+            <li><a href="treatments.html#prp">PRP Therapy</a></li>
+            <li><a href="treatments.html#stem-cell">Stem Cell Therapy</a></li>
+            <li><a href="treatments.html#prolotherapy">Prolotherapy</a></li>
+            <li><a href="treatments.html#peptides">Peptide Therapy</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Explore</div>
+          <ul class="footer-links">
+            <li><a href="about.html">About Dr. Davenport</a></li>
+            <li><a href="conditions.html">Conditions Treated</a></li>
+            <li><a href="patient-stories.html">Patient Stories</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>1280 Wellness Blvd, Suite 400<br>Scottsdale, AZ 85251</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><a href="tel:5558427200">(555) 842-7200</a></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:hello@aikenphysicalmedicine.com">hello@aikenphysicalmedicine.com</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Orion Pain. All rights reserved.</p>
+        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/utils.js"></script>
+  <script>
+    let allFaqs = [];
+
+    const fallbackFaqs = [
+      { question: 'What is regenerative medicine?', answer: 'Regenerative medicine is a branch of medicine that uses the body\'s own healing mechanisms — or biologically derived substances — to repair, restore, and regenerate damaged tissues. Unlike conventional medicine which often manages symptoms, regenerative medicine aims to address the root cause of pain and dysfunction.', category: 'General' },
+      { question: 'Am I a good candidate for regenerative treatment?', answer: 'Most patients with chronic joint pain, osteoarthritis, tendon or ligament injuries, or inflammatory conditions are good candidates. The best way to find out is to schedule a consultation with Dr. Davenport, who will review your history, imaging, and goals to create a personalized plan.', category: 'General' },
+      { question: 'How is this different from cortisone shots or surgery?', answer: 'Cortisone injections reduce inflammation temporarily but can actually degrade cartilage over time. Surgery carries significant risks, long recovery, and often doesn\'t address the underlying cause. Regenerative therapies stimulate your body to heal the actual damaged tissue — leading to more durable, lasting results.', category: 'Treatments' },
+      { question: 'Is PRP therapy safe?', answer: 'Yes. Because PRP is derived from your own blood, the risk of allergic reaction or rejection is virtually zero. It has been used safely in clinical settings for decades and is FDA-cleared for use in musculoskeletal conditions.', category: 'Treatments' },
+      { question: 'How many treatments will I need?', answer: 'This depends on the condition, its severity, and the treatment used. PRP typically requires 1–3 sessions, prolotherapy may need 3–6, and stem cell therapy is often a single procedure. Dr. Davenport will outline a clear, personalized protocol during your consultation.', category: 'Treatments' },
+      { question: 'Does insurance cover regenerative medicine?', answer: 'The short answer is no — regenerative procedures (PRP, stem cell therapy, exosomes, prolotherapy, peptides) are not covered by insurance. However, your office visit and consultation ARE typically covered. These treatments are considered cash-pay services. We are completely transparent about this upfront because we believe you deserve to know exactly what you\'re investing in before you come in.', category: 'Insurance' },
+      { question: 'Why isn\'t regenerative medicine covered by insurance?', answer: 'Insurance approvals typically lag 10–15 years behind medical innovation. These therapies are FDA-compliant and backed by hundreds of clinical studies, but insurers classify them as "experimental" or "elective." The good news: we believe this will change — and we are actively advocating for coverage. In the meantime, many patients find the one-time cost far less than a lifetime of co-pays, medications, and eventual surgery.', category: 'Insurance' },
+      { question: 'Can I use my HSA or FSA for treatment?', answer: 'Yes — Health Savings Accounts (HSA) and Flexible Spending Accounts (FSA) can often be used to pay for regenerative procedures. We also offer financing options through third-party providers. During your free consultation, our team will walk you through all available payment options so cost is never a barrier to healing.', category: 'Insurance' },
+      { question: 'How long does recovery take?', answer: 'Most patients experience minimal downtime — many return to light activity the same day. Full results typically develop over 6–12 weeks as your body\'s regenerative process unfolds. Dr. Davenport will give you a specific recovery timeline based on your treatment.', category: 'Recovery' },
+      { question: 'How do I schedule a consultation?', answer: 'Simply click "Book a Free Consultation" anywhere on this website, call us at (555) 842-7200, or fill out our contact form. Our care team will reach out within one business day to schedule your appointment.', category: 'Appointments' },
+    ];
+
+    function renderFaqs(faqs) {
+      const list = document.getElementById('faqList');
+      list.innerHTML = faqs.map((faq, i) => `
+        <div class="faq-item fade-up" style="transition-delay:${Math.min(i * 0.06, 0.4)}s;" data-category="${faq.category}">
+          <div class="faq-question">
+            <h4>${faq.question}</h4>
+            <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">${faq.answer}</div>
+          </div>
+        </div>
+      `).join('');
+      initFAQ();
+      initScrollAnimations();
+    }
+
+    function filterFaqs(cat) {
+      const filtered = cat === 'all' ? allFaqs : allFaqs.filter(f => f.category === cat);
+      renderFaqs(filtered);
+    }
+
+    async function loadFaqs() {
+      try {
+        const data = await fetchTable('faqs', { sort: 'order', limit: 50 });
+        allFaqs = data.data && data.data.length ? data.data : fallbackFaqs;
+        renderFaqs(allFaqs);
+      } catch(e) {
+        allFaqs = fallbackFaqs;
+        renderFaqs(allFaqs);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadFaqs();
+      document.querySelectorAll('.faq-category-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.faq-category-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          filterFaqs(btn.dataset.cat);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

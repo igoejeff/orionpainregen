@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" role="img" aria-label="Fox News">
+  <!-- Fox News logo: navy blue box with FOX NEWS white text + red accent -->
+  <rect width="260" height="80" rx="6" fill="#003366"/>
+  <rect y="60" width="260" height="20" rx="0" fill="#CC0000"/>
+  <rect y="60" width="260" height="20" rx="0" fill="#CC0000"/>
+  <!-- Round bottom corners on the red bar -->
+  <rect x="0" y="60" width="260" height="14" fill="#CC0000"/>
+  <rect x="0" y="64" width="260" height="16" rx="0" fill="#CC0000"/>
+  <path d="M0 60 h260 v14 q0 6 -6 6 H6 q-6 0 -6 -6 Z" fill="#CC0000"/>
+  <!-- FOX text -->
+  <text x="130" y="42" font-family="'Arial Black', Arial, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">FOX</text>
+  <!-- NEWS text in red bar -->
+  <text x="130" y="74" font-family="'Arial Black', Arial, sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="4">NEWS</text>
+</svg>
