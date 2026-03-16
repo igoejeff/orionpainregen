@@ -660,6 +660,11 @@ h4, h5, h6 {
   padding-top: 4rem;
   padding-bottom: 5rem;
 }
+/* Badge is 3rd grid child — pin it under the right (video) column */
+.hero-video-badge {
+  grid-column: 2;
+  margin-top: 0;
+}
 
 /* ---- LEFT: Content ---- */
 .hero-content {
@@ -802,8 +807,9 @@ h4, h5, h6 {
 .hero-video-wrap {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .hero-video-card {
   position: relative;
@@ -876,17 +882,17 @@ h4, h5, h6 {
 
 /* Floating badges around video */
 .hero-video-badge {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  display: flex;
+  position: relative;
+  display: inline-flex;
   align-items: center;
   gap: 0.75rem;
   background: var(--white);
   border-radius: var(--radius-sm);
   padding: 0.75rem 1.1rem;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
   z-index: 4;
+  align-self: flex-start;
+  margin-top: -2rem;
 }
 .hero-video-badge-icon {
   width: 36px; height: 36px;
