@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Am I a Candidate? | Orion Pain — Scottsdale Regenerative Medicine</title>
+  <meta name="description" content="Take our free 2-minute quiz to find out if regenerative medicine is right for you. Answer a few questions and get a personalized assessment from Orion Pain in Scottsdale, AZ." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <style>
+    /* ── Quiz Page Specific Styles ── */
+    .quiz-hero {
+      background: linear-gradient(135deg, var(--green-deep) 0%, #0f1e40 60%, #1a2f5e 100%);
+      padding: 7rem 0 5rem;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .quiz-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 40%, rgba(232,160,32,0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 60% at 80% 60%, rgba(45,74,122,0.4) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .quiz-hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.07;
+      background: var(--gold);
+      pointer-events: none;
+    }
+    .quiz-hero-orb-1 { width: 420px; height: 420px; top: -120px; left: -100px; }
+    .quiz-hero-orb-2 { width: 300px; height: 300px; bottom: -80px; right: -60px; }
+
+    .quiz-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .quiz-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(232,160,32,0.15);
+      border: 1px solid rgba(232,160,32,0.4);
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.45rem 1.1rem;
+      border-radius: 2rem;
+      margin-bottom: 1.75rem;
+    }
+    .quiz-badge i { font-size: 0.75rem; }
+
+    .quiz-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 5vw, 3.75rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+    }
+    .quiz-hero h1 em {
+      color: var(--gold);
+      font-style: normal;
+    }
+    .quiz-hero-sub {
+      font-size: 1.0625rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.75;
+      max-width: 580px;
+      margin: 0 auto 2.5rem;
+    }
+    .quiz-trust-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .quiz-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .quiz-trust-item i {
+      color: var(--gold);
+      font-size: 0.875rem;
+    }
+
+    /* ── Quiz Embed Section ── */
+    .quiz-embed-section {
+      background: var(--cream);
+      padding: 4rem 0 5rem;
+    }
+    .quiz-embed-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 8px 48px rgba(27,47,94,0.12), 0 2px 8px rgba(27,47,94,0.06);
+      border: 1px solid var(--cream-dark);
+      border-top: 4px solid var(--gold);
+      overflow: hidden;
+      padding: 2.5rem 2.5rem 1.5rem;
+    }
+    .quiz-embed-header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+    .quiz-embed-header h2 {
+      font-size: clamp(1.4rem, 3vw, 1.875rem);
+      font-weight: 800;
+      color: var(--ink);
+      letter-spacing: -0.025em;
+      margin-bottom: 0.625rem;
+    }
+    .quiz-embed-header p {
+      color: var(--muted);
+      font-size: 0.9375rem;
+      line-height: 1.7;
+    }
+    .quiz-steps {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin: 0 auto 2rem;
+      max-width: 540px;
+    }
+    .quiz-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      text-align: center;
+    }
+    .quiz-step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--green-deep);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8125rem;
+      font-weight: 700;
+    }
+    .quiz-step-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .quiz-step-line {
+      flex: 1;
+      height: 2px;
+      background: var(--cream-dark);
+      margin: 0 0.5rem;
+      margin-bottom: 1.4rem;
+    }
+
+    /* GHL iframe container */
+    .quiz-iframe-wrap {
+      width: 100%;
+      min-height: 520px;
+    }
+    .quiz-iframe-wrap iframe {
+      width: 100%;
+      min-height: 520px;
+      border: none;
+      display: block;
+    }
+
+    /* ── Why Take the Quiz section ── */
+    .quiz-why-section {
+      background: var(--white);
+      padding: 5rem 0;
+    }
+    .quiz-why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .quiz-why-card {
+      background: var(--cream);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.75rem;
+      border: 1px solid var(--cream-dark);
+      border-top: 3px solid var(--green-mid);
+      transition: var(--transition);
+    }
+    .quiz-why-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+    .quiz-why-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-xs);
+      background: rgba(27,47,94,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.125rem;
+      color: var(--green-deep);
+      margin-bottom: 1.25rem;
+    }
+    .quiz-why-card h3 {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.625rem;
+      letter-spacing: -0.01em;
+    }
+    .quiz-why-card p {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .quiz-embed-wrap { padding: 1.75rem 1.25rem 1.25rem; }
+      .quiz-why-grid { grid-template-columns: 1fr; }
+      .quiz-trust-row { gap: 1.25rem; }
+      .quiz-steps { display: none; }
+    }
+    @media (max-width: 480px) {
+      .quiz-hero { padding: 5.5rem 0 3.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo-white.png" alt="Orion Pain" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="treatments.html" class="nav-link">Treatments</a></li>
+        <li><a href="conditions.html" class="nav-link">Conditions</a></li>
+        <li><a href="patient-stories.html" class="nav-link">Patient Stories</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="quiz.html" class="nav-link nav-link-quiz"><i class="fa-solid fa-clipboard-question"></i> Am I a Candidate?</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Book a Consultation</a>
+      </div>
+      <button class="nav-hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile">
+    <div class="nav-mobile-logo">
+      <img src="images/logo.png" alt="Orion Pain" />
+    </div>
+    <button class="nav-mobile-close"><i class="fa-solid fa-xmark"></i></button>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="treatments.html" class="nav-link">Treatments</a>
+    <a href="conditions.html" class="nav-link">Conditions</a>
+    <a href="patient-stories.html" class="nav-link">Patient Stories</a>
+    <a href="faq.html" class="nav-link">FAQ</a>
+    <a href="quiz.html" class="btn btn-quiz-mobile btn-lg"><i class="fa-solid fa-clipboard-question"></i> Am I a Candidate?</a>
+    <a href="contact.html" class="btn btn-primary btn-lg">Book a Consultation</a>
+  </div>
+
+  <!-- ── QUIZ HERO ── -->
+  <section class="quiz-hero">
+    <div class="quiz-hero-orb quiz-hero-orb-1"></div>
+    <div class="quiz-hero-orb quiz-hero-orb-2"></div>
+    <div class="container quiz-hero-inner fade-up">
+      <div class="quiz-badge">
+        <i class="fa-solid fa-clipboard-question"></i>
+        Free Candidacy Assessment
+      </div>
+      <h1>
+        Are You a Candidate for<br>
+        <em>Regenerative Medicine?</em>
+      </h1>
+      <p class="quiz-hero-sub">
+        Answer a few short questions and find out in under 2 minutes if regenerative therapy could be right for your pain — no pressure, no obligation, just real answers.
+      </p>
+      <div class="quiz-trust-row">
+        <div class="quiz-trust-item">
+          <i class="fa-solid fa-clock"></i>
+          Under 2 minutes
+        </div>
+        <div class="quiz-trust-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          100% confidential
+        </div>
+        <div class="quiz-trust-item">
+          <i class="fa-solid fa-circle-check"></i>
+          No obligation
+        </div>
+        <div class="quiz-trust-item">
+          <i class="fa-solid fa-user-doctor"></i>
+          Physician-designed
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── QUIZ EMBED ── -->
+  <section class="quiz-embed-section">
+    <div class="container">
+      <div class="quiz-embed-wrap fade-up">
+
+        <div class="quiz-embed-header">
+          <h2>Find Out If You Qualify</h2>
+          <p>Our quick assessment was designed by Dr. Davenport to identify ideal candidates for regenerative care.</p>
+        </div>
+
+        <!-- Progress steps (visual only) -->
+        <div class="quiz-steps">
+          <div class="quiz-step">
+            <div class="quiz-step-num">1</div>
+            <div class="quiz-step-label">Your Pain</div>
+          </div>
+          <div class="quiz-step-line"></div>
+          <div class="quiz-step">
+            <div class="quiz-step-num">2</div>
+            <div class="quiz-step-label">History</div>
+          </div>
+          <div class="quiz-step-line"></div>
+          <div class="quiz-step">
+            <div class="quiz-step-num">3</div>
+            <div class="quiz-step-label">Goals</div>
+          </div>
+          <div class="quiz-step-line"></div>
+          <div class="quiz-step">
+            <div class="quiz-step-num">4</div>
+            <div class="quiz-step-label">Results</div>
+          </div>
+        </div>
+
+        <!-- GoHighLevel Quiz Embed -->
+        <div class="quiz-iframe-wrap">
+          <iframe
+            src="https://link.mypracticelaunch.com/widget/quiz/u9Zcu9lI35nOyXzODPHu"
+            style="border:none;width:100%;"
+            scrolling="no"
+            id="u9Zcu9lI35nOyXzODPHu"
+            title="quiz"
+          ></iframe>
+        </div>
+        <script src="https://link.mypracticelaunch.com/js/form_embed.js"></script>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHY TAKE THE QUIZ ── -->
+  <section class="quiz-why-section">
+    <div class="container">
+      <div style="text-align:center; max-width:640px; margin:0 auto;">
+        <div class="badge badge-green" style="margin-bottom:1.25rem; display:inline-flex;">
+          <i class="fa-solid fa-leaf"></i>&nbsp; Why It Matters
+        </div>
+        <h2 class="display-md" style="color:var(--ink); margin-bottom:1rem;">Not Everyone Needs Surgery.<br>Let's Find Your Best Path.</h2>
+        <p style="color:var(--muted); font-size:1rem; line-height:1.75;">Most patients come to Orion Pain after years of failed injections, medications, and referrals. Our assessment helps you skip the guesswork.</p>
+      </div>
+
+      <div class="quiz-why-grid">
+        <div class="quiz-why-card fade-up">
+          <div class="quiz-why-icon">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          </div>
+          <h3>Personalized Insight</h3>
+          <p>The quiz evaluates your pain type, duration, and history to flag whether biologics, PRP, prolotherapy, or another protocol may be appropriate for you.</p>
+        </div>
+        <div class="quiz-why-card fade-up delay-1">
+          <div class="quiz-why-icon">
+            <i class="fa-solid fa-stopwatch"></i>
+          </div>
+          <h3>Results in 2 Minutes</h3>
+          <p>No lengthy forms, no waiting room. In just a few taps you'll know whether scheduling a consultation with Dr. Davenport makes sense for your situation.</p>
+        </div>
+        <div class="quiz-why-card fade-up delay-2">
+          <div class="quiz-why-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>Zero Pressure</h3>
+          <p>Your results are informational — no one will call you if you're not a fit. If you are, our care team will reach out with next steps at your pace.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINAL CTA ── -->
+  <section class="final-cta">
+    <div class="final-cta-orb final-cta-orb-1"></div>
+    <div class="final-cta-orb final-cta-orb-2"></div>
+    <div class="container final-cta-content fade-up">
+      <div class="badge badge-white" style="margin-bottom:2rem; display:inline-flex;">
+        <i class="fa-solid fa-calendar-check"></i>&nbsp; Ready to Take the Next Step?
+      </div>
+      <h2>Already Know You're<br>Ready? Let's Talk.</h2>
+      <p>Skip the quiz and book a free consultation directly with Dr. Davenport's care team. We'll review your case personally.</p>
+      <div class="final-cta-buttons">
+        <a href="contact.html" class="btn btn-white btn-lg">
+          Book Your Free Consultation
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="tel:5558427200" class="btn btn-ghost-white btn-lg">
+          <i class="fa-solid fa-phone"></i>
+          (555) 842-7200
+        </a>
+      </div>
+      <p class="final-cta-trust">No surgery &nbsp;&nbsp;·&nbsp;&nbsp; No drugs &nbsp;&nbsp;·&nbsp;&nbsp; No obligation &nbsp;&nbsp;·&nbsp;&nbsp; Scottsdale, AZ</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="images/logo-white.png" alt="Orion Pain" class="footer-logo-img" />
+          <p class="footer-tagline">Heal Without Surgery. Restore Without Drugs.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Treatments</div>
+          <ul class="footer-links">
+            <li><a href="treatments.html#prp">PRP Therapy</a></li>
+            <li><a href="treatments.html#stem-cell">Stem Cell Therapy</a></li>
+            <li><a href="treatments.html#prolotherapy">Prolotherapy</a></li>
+            <li><a href="treatments.html#peptides">Peptide Therapy</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Explore</div>
+          <ul class="footer-links">
+            <li><a href="about.html">About Dr. Davenport</a></li>
+            <li><a href="conditions.html">Conditions Treated</a></li>
+            <li><a href="patient-stories.html">Patient Stories</a></li>
+            <li><a href="quiz.html">Am I a Candidate?</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>1280 Wellness Blvd, Suite 400<br>Scottsdale, AZ 85251</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><a href="tel:5558427200">(555) 842-7200</a></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:hello@aikenphysicalmedicine.com">hello@aikenphysicalmedicine.com</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Orion Pain. All rights reserved.</p>
+        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/utils.js"></script>
+
+</body>
+</html>

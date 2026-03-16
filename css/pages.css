@@ -303,6 +303,18 @@
 }
 .contact-form-wrap h3 { font-size: 1.75rem; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
 .contact-form-wrap > p { color: var(--muted); margin-bottom: 2rem; font-size: 0.875rem; }
+
+/* GoHighLevel iframe container */
+.ghl-form-container {
+  width: 100%;
+  min-height: 600px;
+}
+.ghl-form-container iframe {
+  width: 100%;
+  min-height: 600px;
+  border: none;
+  display: block;
+}
 .form-group { margin-bottom: 1.25rem; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 label {

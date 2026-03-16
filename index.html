@@ -27,6 +27,7 @@
         <li><a href="conditions.html" class="nav-link">Conditions</a></li>
         <li><a href="patient-stories.html" class="nav-link">Patient Stories</a></li>
         <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="quiz.html" class="nav-link nav-link-quiz"><i class="fa-solid fa-clipboard-question"></i> Am I a Candidate?</a></li>
       </ul>
       <div class="nav-cta">
         <a href="contact.html" class="btn btn-primary">Book a Consultation</a>
@@ -48,6 +49,7 @@
     <a href="conditions.html" class="nav-link">Conditions</a>
     <a href="patient-stories.html" class="nav-link">Patient Stories</a>
     <a href="faq.html" class="nav-link">FAQ</a>
+    <a href="quiz.html" class="btn btn-quiz-mobile btn-lg"><i class="fa-solid fa-clipboard-question"></i> Am I a Candidate?</a>
     <a href="contact.html" class="btn btn-primary btn-lg">Book a Consultation</a>
   </div>
 
@@ -69,7 +71,7 @@
         <h1 class="hero-title">
           Heal Without<br>
           <em>Surgery.</em><br>
-          Restore Without<br>Drugs.
+          Restore Without <span style="color:var(--gold);">Drugs.</span>
         </h1>
         <p class="hero-subtitle">
           Orion Pain delivers science-backed regenerative therapies that address the root cause of chronic pain, inflammation, and joint degeneration — so you can reclaim your life.
@@ -96,8 +98,8 @@
           </div>
           <div class="hero-trust-divider"></div>
           <div class="hero-trust-item">
-            <span class="hero-trust-num" data-count="98" data-suffix="%">98%</span>
-            <span class="hero-trust-label">Patient Satisfaction</span>
+            <span class="hero-trust-num" data-count="10" data-suffix="+">10+</span>
+            <span class="hero-trust-label">Conditions Treated</span>
           </div>
           <div class="hero-trust-divider"></div>
           <div class="hero-trust-item">
@@ -1722,6 +1724,99 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ===================== QUIZ SECTION ===================== -->
+  <section class="quiz-home-section" id="candidacy-quiz">
+    <!-- Background orbs -->
+    <div class="quiz-home-orb quiz-home-orb-1"></div>
+    <div class="quiz-home-orb quiz-home-orb-2"></div>
+
+    <div class="container">
+
+      <!-- Two-column layout: left intro, right quiz embed -->
+      <div class="quiz-home-inner">
+
+        <!-- LEFT: Intro content -->
+        <div class="quiz-home-content fade-up">
+          <div class="badge badge-gold-outline" style="margin-bottom:1.5rem; display:inline-flex;">
+            <i class="fa-solid fa-clipboard-question"></i>&nbsp; Free 2-Minute Assessment
+          </div>
+          <h2 class="quiz-home-title">
+            Are You a Candidate for<br>
+            <em>Regenerative Medicine?</em>
+          </h2>
+          <p class="quiz-home-sub">
+            Not sure if regenerative therapy is right for you? Answer a few quick questions and get a personalized assessment — designed by Dr. Davenport himself.
+          </p>
+
+          <ul class="quiz-home-checks">
+            <li>
+              <span class="quiz-check-icon"><i class="fa-solid fa-check"></i></span>
+              <span>Takes under 2 minutes to complete</span>
+            </li>
+            <li>
+              <span class="quiz-check-icon"><i class="fa-solid fa-check"></i></span>
+              <span>Covers 10+ conditions we treat</span>
+            </li>
+            <li>
+              <span class="quiz-check-icon"><i class="fa-solid fa-check"></i></span>
+              <span>100% free — zero obligation</span>
+            </li>
+            <li>
+              <span class="quiz-check-icon"><i class="fa-solid fa-check"></i></span>
+              <span>Physician-reviewed criteria</span>
+            </li>
+          </ul>
+
+          <div class="quiz-home-stats">
+            <div class="quiz-home-stat">
+              <div class="quiz-home-stat-num">90%</div>
+              <div class="quiz-home-stat-label">of patients avoided surgery</div>
+            </div>
+            <div class="quiz-home-stat-divider"></div>
+            <div class="quiz-home-stat">
+              <div class="quiz-home-stat-num">3,200+</div>
+              <div class="quiz-home-stat-label">patients treated</div>
+            </div>
+          </div>
+
+          <a href="quiz.html" class="btn btn-quiz-cta btn-lg">
+            <i class="fa-solid fa-clipboard-question"></i>
+            Take the Full Quiz
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- RIGHT: Embedded quiz -->
+        <div class="quiz-home-embed fade-up delay-2">
+          <div class="quiz-home-embed-card">
+            <div class="quiz-home-embed-header">
+              <div class="quiz-home-embed-icon">
+                <i class="fa-solid fa-stethoscope"></i>
+              </div>
+              <div>
+                <div class="quiz-home-embed-title">Candidacy Quiz</div>
+                <div class="quiz-home-embed-sub">Personalized to your condition</div>
+              </div>
+            </div>
+
+            <!-- GHL Quiz iframe -->
+            <div class="quiz-home-iframe-wrap">
+              <iframe
+                src="https://link.mypracticelaunch.com/widget/quiz/u9Zcu9lI35nOyXzODPHu"
+                style="border:none;width:100%;"
+                scrolling="no"
+                id="u9Zcu9lI35nOyXzODPHu-home"
+                title="quiz"
+              ></iframe>
+            </div>
+            <script src="https://link.mypracticelaunch.com/js/form_embed.js"></script>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
