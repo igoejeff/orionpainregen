@@ -317,11 +317,15 @@
 }
 .form-group { margin-bottom: 1.25rem; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-label {
+.contact-form-wrap label,
+.ghl-form-container label {
   display: block; font-size: 0.75rem; font-weight: 700;
   color: var(--ink-80); margin-bottom: 0.5rem;
   letter-spacing: 0.05em; text-transform: uppercase;
 }
+/* Protect nav list items from global overrides */
+.nav-links li { display: flex; align-items: center; margin: 0; padding: 0; }
+.nav-links { align-items: center; }
 input, select, textarea {
   width: 100%;
   padding: 0.875rem 1.125rem;

@@ -838,28 +838,9 @@ h4, h5, h6 {
   border: none;
   display: block;
 }
-/* Gradient behind quote/tagline so text is legible over video */
-.hero-video-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 45%;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(8,15,40,0.92) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-}
-/* Bottom text block — quote + tagline */
-.hero-video-textblock {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  padding: 1.75rem 1.5rem 1.5rem;
-  z-index: 3;
-}
+/* Overlay and text block removed — kept video fully interactive */
+.hero-video-card::after { display: none; }
+.hero-video-textblock { display: none; }
 .hero-video-quote {
   font-family: var(--font-display);
   font-size: 1.125rem;
@@ -1042,15 +1023,34 @@ h4, h5, h6 {
     gap: 3rem;
     padding-top: 3rem;
   }
-  .hero-video-wrap { display: flex; } /* show real Vimeo video on mobile */
-  .hero-video-card { max-width: 100%; }
+  .hero-video-wrap { display: flex; flex-direction: column; }
+  .hero-video-card {
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 16/9;
+    min-height: 220px;
+  }
+  .hero-vimeo-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .hero-vimeo-iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+  }
   .hero-content { max-width: 100%; }
 }
 @media (max-width: 768px) {
-  .hero { padding-top: 72px; min-height: 100svh; }
+  .hero { padding-top: 72px; min-height: auto; }
   .hero-title { font-size: clamp(2.4rem, 10vw, 3.5rem); }
   .hero-trust { gap: 1.25rem; }
   .hero-trust-divider { display: none; }
+  .hero-video-card { min-height: 200px; }
 }
 
 /* =============================================
