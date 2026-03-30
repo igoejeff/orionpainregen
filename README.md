@@ -1,90 +1,138 @@
-# Stem Regen Medical — stemregenvein.com
+# 🌿 Apex Regenerative Medicine Website
 
-**Specialty:** Varicose & Spider Vein Treatment  
-**Locations:** Midtown Manhattan (7 W 45th St, Floor 9) · Brooklyn (640 Parkside Ave, Suite 201)  
-**Phone:** 877-744-0446  
-**Live domain:** https://www.stemregenvein.com/
+A **premium, conversion-focused single-clinic website** for a regenerative medicine practice. Built with a "Functional Medicine meets Apple design" aesthetic — cinematic, clean, and conversion-optimized at every scroll depth.
 
 ---
 
-## ✅ Completed Fixes (Google Ads Compliance Audit)
+## ✅ Completed Features
 
-### Critical Issues — FIXED
-| Issue | Status |
-|---|---|
-| **robots.txt** — contained `Atlanta Medical Clinic` branding + `atlantamedicalclinic.com` sitemap URL | ✅ Fixed |
-| **Smartlook third-party tracker** — present on all 14 pages, flagged by Google | ✅ Removed from every page |
-| **Genspark video** — hardcoded `genspark.ai` URL in `js/main.js` video modal | ✅ Removed |
-| `js/main.js` header comment referenced "Atlanta Medical Clinic" | ✅ Fixed |
-| **`stemregenmedical.com`** references on all published pages | ✅ Replaced with `stemregenvein.com` |
-| **`atlantamedicalclinic.com`** references on all published pages | ✅ Removed |
-| `@ATLMedicalClinic` Twitter handle | ✅ Changed to `@StemRegenMedical` |
-| Atlanta geo-coordinates (33.78, -84.39) | ✅ Changed to NYC (40.7557, -73.9808) |
-| Canonical / og:url / JSON-LD @id | ✅ All point to `stemregenvein.com` |
+### Pages Built
+| Page | File | Description |
+|------|------|-------------|
+| **Homepage** | `index.html` | Full 9-section homepage with all CTAs |
+| **About** | `about.html` | Doctor profile, credentials, timeline |
+| **Treatments** | `treatments.html` | All 4 treatments with sidebars |
+| **Conditions** | `conditions.html` | 4 conditions with comparison callouts |
+| **Patient Stories** | `patient-stories.html` | Filterable testimonials grid |
+| **FAQ** | `faq.html` | Category-filtered accordion FAQ |
+| **Contact** | `contact.html` | Booking form with success state |
 
-### Content Issues — FIXED
-| Issue | Status |
-|---|---|
-| Non-vein testimonial labels (Knee Pain, Back Pain, Neuropathy, Spinal) in testimonials.html | ✅ Updated to vein-specific labels |
-| Non-vein review quotes (neuropathy, back pain) in testimonials.html | ✅ Replaced with vein-specific text |
-| NFL alt text / title on video cards in index.html and testimonials.html | ✅ Changed to "Vein treatment patient testimonial" |
-| Blog page showing diabetes, knee pain, neuropathy articles | ✅ Replaced with 6 vein-only articles |
-| Blog filter buttons (Knee Pain, Neuropathy, Diabetes, Chronic Pain) | ✅ Removed; only vein categories remain |
-| Blog JSON-LD schema containing non-vein BlogPosting entries | ✅ Replaced with vein-only posts |
-| Non-vein video testimonials (Softwave, Cellular Therapy, Orthopedic Rehab) | ✅ All badges updated to vein-specific |
-| Team bios mentioning regenerative medicine, orthopedics, neurology | ✅ Updated to vein/vascular focus |
-| `reviewCount` inflated to 5,000 | ✅ Fixed to 312 |
-| GoHighLevel form broken HTML (stray `</div><p>` after iframe) | ✅ Repaired |
-| `blog-source.html` — Atlanta Medical Clinic source page published live | ✅ Deleted |
-| `_temp/our-team-source.html` — archive file with old branding | ✅ Deleted |
+### Design System
+- Premium color palette: Deep Forest Green + Warm Cream + Gold
+- Typography: Playfair Display (headings) + Inter (body)
+- Scroll-triggered fade-up animations on all sections
+- Counter animations (count-up) for stats on viewport entry
+- Frosted glass sticky navigation
+- Mobile-responsive hamburger menu
+- Hover micro-interactions on all cards and buttons
 
----
-
-## 📄 Site Pages (all canonical to stemregenvein.com)
-
-| Page | URL |
-|---|---|
-| Home | `index.html` |
-| Blog | `blog.html` |
-| Testimonials | `testimonials.html` |
-| Meet the Team | `team-page.html` |
-| Vein Quiz | `quiz.html` |
-| Thank You | `thank-you.html` (noindex) |
-| Varicose Vein Treatment | `services/varicose-vein-treatment.html` |
-| Spider Vein Treatment | `services/spider-vein-treatment.html` |
-| VENCLOSE RFA | `services/venclose-rfa.html` |
-| Varithena | `services/varithena.html` |
-| Sclerotherapy | `services/sclerotherapy.html` |
-| Privacy Policy | `privacy-policy.html` |
-| Terms & Conditions | `terms.html` |
-| Accessibility | `accessibility.html` |
+### CTA Architecture
+Every section has a targeted CTA:
+- Hero → "Book a Free Consultation"
+- Problem → "There's Another Way"
+- Conditions → "See If You Qualify"
+- How It Works → "Start Your Journey — It's Free"
+- Doctor → "Meet Dr. Mitchell"
+- Testimonials → "Read More Patient Stories"
+- Final CTA → "Book Your Free Consultation"
 
 ---
 
-## 🔧 Technical Stack
+## 🗂️ File Structure
 
-- **Static HTML/CSS/JS** — no server-side code
-- **Google Ads tag:** `AW-17641429812` (gtag.js only — Smartlook removed)
-- **Lead form:** GoHighLevel embed via `link.mypracticelaunch.com` (index.html + quiz.html)
-- **Fonts:** Google Fonts (Oswald, Playfair Display, Inter)
-- **Icons:** Font Awesome 6.4.0 (jsDelivr CDN)
-- **Analytics:** Smartlook REMOVED (was causing Google Ads policy flag)
+```
+index.html              → Homepage
+about.html              → Doctor profile
+treatments.html         → All 4 treatment modalities
+conditions.html         → 4 conditions treated
+patient-stories.html    → Patient testimonials
+faq.html                → FAQ accordion
+contact.html            → Booking form
+
+css/
+  style.css             → Full design system + all component styles
+  pages.css             → Page-specific styles (about, treatments, etc.)
+
+js/
+  utils.js              → Shared JS: nav, animations, counters, API helpers
+```
 
 ---
 
-## 🚀 Next Steps
+## 🔗 Page URIs
 
-1. **Publish** — click the Publish tab to deploy
-2. **Request Google Ads review** — Policy Manager → Request Review
-3. **Confirm email address** — currently `info@stemregenmedical.com` in schema; update to `info@stemregenvein.com` if needed
-4. **Replace placeholder YouTube video IDs** — current videos (aNjisNSY-Xw, etc.) are legacy; swap for actual Stem Regen vein patient videos when available
-5. **Verify GoHighLevel form** — confirm `yor69LLZAbDeGfjXGVei` form ID is still active
+| URI | Description |
+|-----|-------------|
+| `/index.html` | Homepage |
+| `/about.html` | About the doctor |
+| `/treatments.html` | Treatments hub (#prp, #stem-cell, #prolotherapy, #peptides) |
+| `/conditions.html` | Conditions (#chronic-pain, #osteoarthritis, #inflammation, #sports-injuries) |
+| `/patient-stories.html` | Patient testimonials with filter |
+| `/faq.html` | FAQ with category filter |
+| `/contact.html` | Booking / contact form |
 
 ---
 
-## 📊 Schema Data
+## 📊 Data Models
 
-- **AggregateRating:** 4.7 / 5 from 312 reviews
-- **Procedures listed:** VENCLOSE RFA, Varithena, Sclerotherapy, ClariVein
-- **Specialty:** Vascular Surgery
-- **Addresses:** Midtown Manhattan + Brooklyn (NJ address removed from schema)
+| Table | Purpose |
+|-------|---------|
+| `clinic` | Clinic info: name, address, phone, hours |
+| `doctor` | Doctor profile: bio, credentials, stats |
+| `treatments` | 4 treatment modalities with metadata |
+| `conditions` | 4 conditions with symptoms + treatment links |
+| `testimonials` | Patient stories with ratings + filter data |
+| `faqs` | FAQ entries with category grouping |
+| `consultations` | Submitted contact form leads |
+
+---
+
+## 🎨 Design System Reference
+
+### Colors
+```css
+--green-deep:   #1B4332   /* Primary buttons, headings */
+--green-mid:    #2D6A4F   /* Hover states */
+--green-sage:   #52B788   /* Accents, labels */
+--cream:        #F8F4EF   /* Section backgrounds */
+--charcoal:     #1C1C1E   /* Dark sections */
+--gold:         #C9A84C   /* Badges, highlights */
+```
+
+### Button Classes
+- `.btn.btn-primary` — Deep green filled
+- `.btn.btn-outline` — Green outlined
+- `.btn.btn-ghost-white` — White outlined (dark bg)
+- `.btn.btn-white` — White filled (dark bg)
+- `.btn.btn-gold` — Gold filled
+- `.btn-link` — Text link with arrow
+
+---
+
+## 🔧 Customization for New Clients
+
+To adapt this template for a new clinic, update:
+
+1. **Clinic name + tagline** — Search/replace "Apex Regenerative Medicine"
+2. **Doctor name + credentials** — Replace "Dr. Sarah Mitchell" + credentials
+3. **Phone + email + address** — In footer, contact page, and hero
+4. **City/State** — "Scottsdale, AZ" references
+5. **Testimonials** — Update in the `testimonials` table via API
+6. **Doctor photo** — Replace placeholder with actual photo
+7. **Brand colors** — Update CSS variables in `:root` in `style.css`
+8. **Logo** — Replace `.nav-logo-mark` icon or add `<img>` tag
+
+---
+
+## 🚀 Recommended Next Steps
+
+- [ ] Add real doctor photo (replace placeholder icon)
+- [ ] Add clinic logo to nav
+- [ ] Connect contact form to email/CRM (Mailchimp, HubSpot, etc.)
+- [ ] Add Google Maps embed to contact page
+- [ ] Add blog/articles section
+- [ ] Add "Am I a Candidate?" interactive quiz
+- [ ] SEO: Add meta tags, OG images, sitemap.xml
+- [ ] Analytics: Add Google Analytics / GTM
+- [ ] Performance: Add image optimization + lazy loading
+- [ ] Add real patient photos / video testimonials
