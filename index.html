@@ -25,7 +25,7 @@
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="treatments.html" class="nav-link">Treatments</a></li>
         <li><a href="conditions.html" class="nav-link">Conditions</a></li>
-        <li><a href="patient-stories.html" class="nav-link">Patient Stories</a></li>
+        <li><a href="patient-stories.html" class="nav-link">Testimonials</a></li>
         <li><a href="faq.html" class="nav-link">FAQ</a></li>
         <li><a href="quiz.html" class="nav-link nav-link-quiz"><i class="fa-solid fa-clipboard-question"></i> Am I a Candidate?</a></li>
       </ul>
@@ -47,7 +47,7 @@
     <a href="about.html" class="nav-link">About</a>
     <a href="treatments.html" class="nav-link">Treatments</a>
     <a href="conditions.html" class="nav-link">Conditions</a>
-    <a href="patient-stories.html" class="nav-link">Patient Stories</a>
+    <a href="patient-stories.html" class="nav-link">Testimonials</a>
     <a href="faq.html" class="nav-link">FAQ</a>
     <a href="quiz.html" class="btn btn-quiz-mobile btn-lg"><i class="fa-solid fa-clipboard-question"></i> Am I a Candidate?</a>
     <a href="contact.html" class="btn btn-primary btn-lg">Request a Call Back</a>
@@ -331,12 +331,9 @@
             </svg>
           </div>
 
-          <!-- ABC — inline SVG, white circle + white wordmark -->
-          <div class="media-logo-wrap">
-            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-label="ABC" style="height:38px;width:auto;">
-              <circle cx="40" cy="40" r="38" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="3"/>
-              <text x="40" y="52" font-family="'Helvetica Neue',Arial,sans-serif" font-size="28" font-weight="700" fill="rgba(255,255,255,0.92)" text-anchor="middle" letter-spacing="1">abc</text>
-            </svg>
+          <!-- ABC — uploaded logo -->
+          <div class="media-logo-wrap keep-color">
+            <img src="images/logo-abc.png" alt="ABC" class="media-logo-img" />
           </div>
 
           <!-- NBC — keep original peacock colors -->
@@ -531,7 +528,7 @@
             <div class="pain-spot" style="top:42%;left:55%;"></div>
           </div>
 
-          <!-- Card 2: Knee — Meniscus / Patellar -->
+          <!-- Card 2: Knee — Meniscus -->
           <div class="pain-card">
             <img src="images/pain-knee.jpg"
                  alt="Person holding knee in pain" class="pain-img" loading="lazy" />
@@ -539,7 +536,7 @@
             <div class="pain-xray-tint"></div>
             <div class="pain-label">
               <i class="fa-solid fa-circle-radiation"></i>
-              <span>Knee, Meniscus &amp; Patellar</span>
+              <span>Knee &amp; Meniscus</span>
             </div>
             <div class="pain-spot" style="top:68%;left:48%;"></div>
           </div>
@@ -636,7 +633,7 @@
             <div class="regen-icon"><i class="fa-solid fa-dna"></i></div>
             <div>
               <h4>Next-Gen Biologics</h4>
-              <p>We offer umbilical cord tissue and exosomes — containing growth factors, cytokines, hyaluronic acid, and stem cells that are potent, active, and viable.</p>
+              <p>We offer <a href="#biologics" class="inline-link">orthobiologics</a> — containing growth factors, cytokines, hyaluronic acid, and mesenchymal stem cells that are potent, active, and viable.</p>
             </div>
           </div>
           <div class="regen-card">
@@ -904,7 +901,7 @@
           <span class="section-label section-label-light">Next-Generation Biologics</span>
           <h2 class="display-lg">The Most Revolutionary<br>Therapies in Medicine Today.</h2>
           <p class="biologics-sub">
-            The most advanced regenerative therapies now being offered include <strong>umbilical cord tissue</strong> and <strong>exosomes</strong> — biologics containing a potent concentration of the body's most powerful healing agents, active and ready to work from the moment of delivery.
+            The most advanced regenerative therapies now being offered include <a href="#biologics" class="inline-link-light">orthobiologics</a> — biologics containing a potent concentration of the body's most powerful healing agents, active and ready to work from the moment of delivery.
           </p>
           <div class="biologics-header-stats">
             <div class="bio-stat">
@@ -982,7 +979,7 @@
           <div class="biologic-hero-badge biologic-badge-gold">Cutting Edge</div>
           <h3>Exosome Therapy</h3>
           <p class="biologic-hero-desc">
-            Exosomes are nano-sized signaling vesicles released by stem cells — the biological messengers that tell your body <em>exactly</em> how and where to heal. They carry growth factors, genetic instructions, and anti-inflammatory signals directly into damaged cells, triggering regeneration at a level no drug can replicate.
+            Exosomes are nano-sized signaling vesicles released by mesenchymal stem cells — the biological messengers that tell your body <em>exactly</em> how and where to heal. They carry growth factors, genetic instructions, and anti-inflammatory signals directly into damaged cells, triggering regeneration at a level no drug can replicate.
           </p>
           <ul class="biologic-hero-list">
             <li><i class="fa-solid fa-vial"></i> Billions of signaling exosomes per dose</li>
@@ -990,6 +987,56 @@
             <li><i class="fa-solid fa-vial"></i> Powerful anti-inflammatory cytokines</li>
             <li><i class="fa-solid fa-vial"></i> No cells — zero rejection risk</li>
             <li><i class="fa-solid fa-vial"></i> Deepest cellular penetration of any biologic</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Ask About This Therapy <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- PRP -->
+        <div class="biologic-hero-card">
+          <div class="biologic-sci-img-wrap">
+            <img src="images/sci-prp.jpg" alt="Platelet-rich plasma preparation in centrifuge tubes" class="biologic-sci-img" loading="lazy" onerror="this.parentElement.style.display='none'" />
+            <div class="biologic-sci-img-overlay"></div>
+            <div class="biologic-sci-label"><i class="fa-solid fa-droplet"></i> Platelet-Rich Plasma</div>
+          </div>
+          <div class="biologic-hero-icon">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <div class="biologic-hero-badge" style="background:rgba(232,160,32,0.18); color:var(--gold);">Proven</div>
+          <h3>PRP Therapy</h3>
+          <p class="biologic-hero-desc">
+            Platelet-Rich Plasma is derived from your own blood — concentrated to contain up to 10× the normal level of growth factors. When injected precisely into damaged tissue, PRP triggers the body's own repair cascade, accelerating healing in tendons, ligaments, joints, and soft tissue.
+          </p>
+          <ul class="biologic-hero-list">
+            <li><i class="fa-solid fa-vial"></i> Derived from your own blood (autologous)</li>
+            <li><i class="fa-solid fa-vial"></i> High-concentration growth factors</li>
+            <li><i class="fa-solid fa-vial"></i> Stimulates collagen &amp; tissue repair</li>
+            <li><i class="fa-solid fa-vial"></i> Anti-inflammatory platelets</li>
+            <li><i class="fa-solid fa-vial"></i> Safe, natural, no rejection risk</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Ask About This Therapy <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Bone Marrow Aspirate -->
+        <div class="biologic-hero-card">
+          <div class="biologic-sci-img-wrap">
+            <img src="images/sci-bone-marrow.jpg" alt="Bone marrow aspirate concentrate — stem cell rich biological material" class="biologic-sci-img" loading="lazy" onerror="this.parentElement.style.display='none'" />
+            <div class="biologic-sci-img-overlay"></div>
+            <div class="biologic-sci-label"><i class="fa-solid fa-bone"></i> Bone Marrow Aspirate</div>
+          </div>
+          <div class="biologic-hero-icon">
+            <i class="fa-solid fa-bone"></i>
+          </div>
+          <div class="biologic-hero-badge" style="background:rgba(45,74,122,0.35); color:rgba(255,255,255,0.9);">Regenerative</div>
+          <h3>Bone Marrow Aspirate</h3>
+          <p class="biologic-hero-desc">
+            Bone Marrow Aspirate Concentrate (BMAC) is harvested from the patient's own iliac crest and concentrated to deliver a rich source of mesenchymal stem cells, growth factors, and platelets directly to the site of injury — providing a powerful, multi-signal regenerative stimulus.
+          </p>
+          <ul class="biologic-hero-list">
+            <li><i class="fa-solid fa-vial"></i> Rich source of mesenchymal stem cells</li>
+            <li><i class="fa-solid fa-vial"></i> Autologous — from your own body</li>
+            <li><i class="fa-solid fa-vial"></i> Growth factors &amp; platelets combined</li>
+            <li><i class="fa-solid fa-vial"></i> Supports bone &amp; cartilage repair</li>
+            <li><i class="fa-solid fa-vial"></i> Concentrated at point of care</li>
           </ul>
           <a href="contact.html" class="btn btn-primary">Ask About This Therapy <i class="fa-solid fa-arrow-right"></i></a>
         </div>
@@ -1815,12 +1862,12 @@
           </div>
           <div class="footer-contact-item">
             <i class="fa-solid fa-clock"></i>
-            <span>Mon–Fri: 8am–5pm<br>Sat: 9am–1pm</span>
+            <span>Mon–Fri: 8am–5pm</span>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2024 Orion Pain. All rights reserved.</p>
+        <p>© 2026 Orion Pain. All rights reserved.</p>
         <div class="footer-bottom-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Use</a>
