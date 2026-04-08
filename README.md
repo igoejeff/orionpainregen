@@ -65,7 +65,7 @@ js/
 |-----|-------------|
 | `/index.html` | Homepage |
 | `/about.html` | About the doctor |
-| `/treatments.html` | Treatments hub (#prp, #stem-cell, #prolotherapy, #peptides) |
+| `/treatments.html` | Treatments hub (#prp, #biologics, #prolotherapy, #peptides) |
 | `/conditions.html` | Conditions (#chronic-pain, #osteoarthritis, #inflammation, #sports-injuries) |
 | `/patient-stories.html` | Patient testimonials with filter |
 | `/faq.html` | FAQ with category filter |
